@@ -26,4 +26,4 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Forum\'s Own Post Filter';
-$string['showonlymyposts'] = 'Show only my posts';
+$string['showonlymyposts'] = 'Show only posts I have participated in';
