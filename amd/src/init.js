@@ -22,7 +22,9 @@
  */
 
 import $ from 'jquery';
-import { get_string } from 'core/str';
+import {
+    get_string as getString
+} from 'core/str';
 
 /**
  * Injects button to the page.
@@ -34,7 +36,7 @@ export const init = (cmid) => {
         if (!$discussions.length) {
             return;
         }
-        const text = await get_string('showonlymyposts', 'local_forumownpostfilter');
+        const text = await getString('showonlymyposts', 'local_forumownpostfilter');
         const $btn = $('<a class="btn btn-secondary">')
             .text(text)
             .attr('href', '/local/forumownpostfilter/view.php?id=' + cmid);
