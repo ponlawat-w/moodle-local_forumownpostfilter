@@ -22,19 +22,21 @@
  */
 
 import $ from 'jquery';
+import { get_string } from 'core/str';
 
 /**
  * Injects button to the page.
  * @param {number} cmid Course Module ID
  */
 export const init = (cmid) => {
-    $(() => {
+    $(async() => {
         const $discussions = $(`[data-cmid=${cmid}]`);
         if (!$discussions.length) {
             return;
         }
+        const text = await get_string('showonlymyposts', 'local_forumownpostfilter');
         const $btn = $('<a class="btn btn-secondary">')
-            .text(M.str.local_forumownpostfilter.showonlymyposts)
+            .text(text)
             .attr('href', '/local/forumownpostfilter/view.php?id=' + cmid);
         const $panel = $('<div class="local-forumownpostfilter-panel"></div>')
             .append($btn);

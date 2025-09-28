@@ -41,7 +41,6 @@ class hookcallbacks {
             if (!$cmid && $forumid) {
                 $cmid = get_coursemodule_from_instance('forum', $forumid)->id;
             }
-            $PAGE->requires->string_for_js('showonlymyposts', 'local_forumownpostfilter');
             $PAGE->requires->js_call_amd('local_forumownpostfilter/init', 'init', [$cmid]);
         }
     }
