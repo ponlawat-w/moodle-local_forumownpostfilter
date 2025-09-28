@@ -1,8 +1,6 @@
 # Forum\'s Own Post Filter #
 
-TODO Describe the plugin shortly here.
-
-TODO Provide more detailed description here.
+Add a button in forum modules to filter only the posts of the current user.
 
 ## Installing via uploaded ZIP file ##
 

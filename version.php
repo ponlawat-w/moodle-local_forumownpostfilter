@@ -28,3 +28,4 @@ $plugin->component = 'local_forumownpostfilter';
 $plugin->release = '0.0.1';
 $plugin->version = 2025021700;
 $plugin->requires = 2022112800;
+$plugin->maturity = MATURITY_STABLE;
