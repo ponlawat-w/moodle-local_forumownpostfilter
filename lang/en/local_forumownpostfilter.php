@@ -26,4 +26,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Forum\'s Own Post Filter';
+$string['privacy:metadata'] = 'This plugin does not store privacy data.';
 $string['showonlymyposts'] = 'Show only posts I have participated in';
