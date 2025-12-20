@@ -33,9 +33,15 @@ class hookcallbacks {
      */
     public static function before_html_footer_generation() {
         global $PAGE;
+        if (!isloggedin()) {
+            return;
+        }
         /** @var \moodle_page $PAGE */
         $PAGE;
-        if (isloggedin() && $PAGE->url->get_path() == '/mod/forum/view.php') {
+        /** @var \core\url $url */
+        $url = $PAGE->url;
+        $url->remove_all_params();
+        if ($url->out_as_local_url() == '/mod/forum/view.php') {
             $cmid = optional_param('id', 0, PARAM_INT);
             $forumid = optional_param('f', 0, PARAM_INT);
             if (!$cmid && $forumid) {

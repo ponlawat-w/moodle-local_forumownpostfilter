@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_forumownpostfilter';
-$plugin->release = '1.0.1';
-$plugin->version = 2025101300;
+$plugin->release = '1.0.2';
+$plugin->version = 2025122000;
 $plugin->requires = 2022112800;
 $plugin->maturity = MATURITY_STABLE;
