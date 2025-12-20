@@ -47,7 +47,7 @@ $cm = cm_info::create($module);
 require_course_login($course, true, $cm);
 
 if (!$capibilitymanager->can_view_discussions($USER)) {
-    throw new moodle_exception('error/nopermissiontoviewforum', 'forum');
+    throw new moodle_exception('noviewdiscussionspermission', 'mod_forum');
 }
 
 $vaultfactory = mod_forum\local\container::get_vault_factory();
