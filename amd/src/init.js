@@ -37,9 +37,12 @@ export const init = (cmid) => {
             return;
         }
         const text = await getString('showonlymyposts', 'local_forumownpostfilter');
+        const searchParams = new URLSearchParams();
+        searchParams.set('id', cmid);
+        const href = `${M.cfg.wwwroot}/local/forumownpostfilter/view.php?${searchParams.toString()}`;
         const $btn = $('<a class="btn btn-secondary">')
             .text(text)
-            .attr('href', '/local/forumownpostfilter/view.php?id=' + cmid);
+            .attr('href', href);
         const $panel = $('<div class="local-forumownpostfilter-panel"></div>')
             .append($btn);
         $discussions.prepend($panel);
